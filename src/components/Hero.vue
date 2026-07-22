@@ -30,8 +30,7 @@
 
       <div class="hero-photo">
         <div class="photo-frame">
-          <!-- Ganti file public/profile.svg dengan foto asli (bisa .jpg/.png), lalu ubah src di bawah -->
-          <img src="/profile.svg" alt="Foto Yusril" />
+          <img src="/yusril_foto.jpg" alt="Foto Yusril" />
         </div>
         <div class="chip-row">
           <span class="chip chip-blue">Web</span>
@@ -46,7 +45,6 @@
 <style scoped>
 .hero {
   padding-top: 56px;
-  overflow: hidden;
 }
 
 .blob {
