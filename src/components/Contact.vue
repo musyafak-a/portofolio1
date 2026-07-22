@@ -3,7 +3,7 @@ const channels = [
   { label: 'Email', value: 'yusril703@email.com', href: 'mailto:yusril703@email.com' },
   { label: 'GitHub', value: 'github.com/musyafak-a', href: 'https://github.com/musyafak-a' },
   { label: 'Instagram', value: '@yusrilki', href: 'https://instagram.com/yusrilki' },
-  { label: 'LinkedIn', value: 'linkedin.com/in/yusril-musyafak', href: 'www.linkedin.com/in/yusrilmusyafak' },
+  { label: 'LinkedIn', value: 'linkedin.com/in/yusril-musyafak', href: 'https://www.linkedin.com/in/yusrilmusyafak/' },
 ]
 </script>
 

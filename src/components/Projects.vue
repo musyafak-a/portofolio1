@@ -6,6 +6,7 @@ const projects = [
     desc: 'Aplikasi mobile keanggotaan gym (Kotlin, ViewBinding, Volley) dengan backend Laravel 12, termasuk halaman kasir bertema dark-red.',
     tags: ['Kotlin', 'Laravel 12', 'Volley'],
     accent: 'blue',
+    image: '/arenafitness.png'
   },
   {
     name: 'SDMS — MIN 4 Jombang',
@@ -13,13 +14,15 @@ const projects = [
     desc: 'Sistem manajemen sekolah berbasis Django + PostgreSQL, dengan halaman profil sekolah publik dan pendaftaran (SPMB) bergaya glassmorphism.',
     tags: ['Django', 'PostgreSQL', 'Glassmorphism'],
     accent: 'yellow',
+    image: '/min4jombang.png'
   },
   {
-    name: 'Data Science Suite',
-    role: '4 Web App Analitik',
-    desc: 'Kumpulan aplikasi Flask untuk clustering K-Means, klasifikasi KNN, forecasting regresi, dan association rules Apriori dari dataset BPS.',
-    tags: ['Flask', 'scikit-learn', 'PythonAnywhere'],
+    name: 'Mobile Speedtracker',
+    role: 'Aplikasi Mobile',
+    desc: 'Aplikasi pelacak kecepatan (speed tracker) berbasis mobile untuk memonitor kecepatan secara real-time.',
+    tags: ['Mobile', 'Tracking'],
     accent: 'blue',
+    image: '/speedtracker.png'
   },
   {
     name: 'Sistem Peminjaman Buku',
@@ -27,6 +30,7 @@ const projects = [
     desc: 'Aplikasi desktop manajemen peminjaman perpustakaan dengan PyQt5 dan SQLite, dilengkapi akses berbasis peran (admin/pengunjung).',
     tags: ['PyQt5', 'SQLite'],
     accent: 'yellow',
+    image: '/perpus.png'
   },
 ]
 </script>
@@ -38,11 +42,14 @@ const projects = [
 
     <div class="project-grid">
       <article class="project-card" :class="'accent-' + p.accent" v-for="p in projects" :key="p.name">
-        <span class="role">{{ p.role }}</span>
-        <h3>{{ p.name }}</h3>
-        <p class="desc">{{ p.desc }}</p>
-        <div class="tags">
-          <span class="tag" v-for="t in p.tags" :key="t">{{ t }}</span>
+        <div class="card-bg" :style="{ backgroundImage: 'url(' + p.image + ')' }"></div>
+        <div class="card-content">
+          <span class="role">{{ p.role }}</span>
+          <h3>{{ p.name }}</h3>
+          <p class="desc">{{ p.desc }}</p>
+          <div class="tags">
+            <span class="tag" v-for="t in p.tags" :key="t">{{ t }}</span>
+          </div>
         </div>
       </article>
     </div>
@@ -76,13 +83,36 @@ h2 {
   position: relative;
   background: #10131A;
   border-radius: 20px;
+  color: #fff;
+  overflow: hidden;
+  transition: transform 0.15s ease;
+}
+
+.card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12; /* Hampir tidak terlihat */
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .card-bg {
+  opacity: 0.35;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
   padding: 28px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  color: #fff;
-  overflow: hidden;
-  transition: transform 0.15s ease;
+  height: 100%;
 }
 
 .project-card::before {
