@@ -1,16 +1,16 @@
 <script setup>
 const projects = [
   {
-    name: 'Arena Gym',
-    role: 'Aplikasi Android + Backend',
-    desc: 'Aplikasi mobile keanggotaan gym (Kotlin, ViewBinding, Volley) dengan backend Laravel 12, termasuk halaman kasir bertema dark-red.',
-    tags: ['Kotlin', 'Laravel 12', 'Volley'],
-    accent: 'blue',
+    name: 'Arena fitness',
+    role: 'sistem informasi gym(website laravel)',
+    desc: 'sistem manajemen membership dengan backend Laravel 12, termasuk halaman kasir bertema dark-red.',
+    tags: ['Laravel 12', 'MySql', 'Bootstrap'],
+    accent: 'red-black-white',
     image: '/arenafitness.png'
   },
   {
     name: 'SDMS — MIN 4 Jombang',
-    role: 'Sistem Manajemen Sekolah',
+    role: 'Sistem Manajemen Sekolah(website django)',
     desc: 'Sistem manajemen sekolah berbasis Django + PostgreSQL, dengan halaman profil sekolah publik dan pendaftaran (SPMB) bergaya glassmorphism.',
     tags: ['Django', 'PostgreSQL', 'Glassmorphism'],
     accent: 'yellow',
@@ -18,18 +18,18 @@ const projects = [
   },
   {
     name: 'Mobile Speedtracker',
-    role: 'Aplikasi Mobile',
+    role: 'Aplikasi Mobile(mobile flutter)',
     desc: 'Aplikasi pelacak kecepatan (speed tracker) berbasis mobile untuk memonitor kecepatan secara real-time.',
-    tags: ['Mobile', 'Tracking'],
-    accent: 'blue',
+    tags: ['flutter', 'dart'],
+    accent: 'green-yellow-white',
     image: '/speedtracker.png'
   },
   {
     name: 'Sistem Peminjaman Buku',
-    role: 'Aplikasi Desktop',
-    desc: 'Aplikasi desktop manajemen peminjaman perpustakaan dengan PyQt5 dan SQLite, dilengkapi akses berbasis peran (admin/pengunjung).',
-    tags: ['PyQt5', 'SQLite'],
-    accent: 'yellow',
+    role: 'Aplikasi Desktop(desktop python)',
+    desc: 'Aplikasi desktop manajemen peminjaman perpustakaan dengan PyQt5 dan MySQL, dilengkapi akses berbasis peran (admin/pengunjung).',
+    tags: ['PyQt5', 'mysql'],
+    accent: 'green-brown-white',
     image: '/perpus.png'
   },
 ]
